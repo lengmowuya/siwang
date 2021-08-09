@@ -1,0 +1,30 @@
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  background: url(https://sc2.nosdn.127.net/2/pic/201804/BG2.jpg) center center no-repeat;
+}
+#pageCenter {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.logo {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+}
+.logo:hover img {
+  width: 95%;
+}
+.logo img {
+  user-select: none;
+  transition: all 0.35s;
+  width: 75%;
+  opacity: 1;
+}
