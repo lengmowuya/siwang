@@ -162,6 +162,7 @@ body{
             display:flex;
             transition:all 0.35s;
             box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
+            min-width: 200px;
             &:first-child{
                 width:80%;
                 border:3px solid gold;
@@ -259,4 +260,58 @@ body{
             }
         }
     }
+}
+
+@media screen and (max-width:480px){
+    .title{
+        .main{
+            font-size:18px;
+        }
+    }
+    #pageCenter{
+        padding-top:20px;   
+    }
+    .rantInfo{
+        margin-left:15px;
+        margin-right:15px;
+        font-size:12px;
+    }
+    #List{
+        ul{
+            padding:5px;
+            li{
+                margin:6px;
+                padding:5px;
+                img{
+                    width:46px;
+                    height:46px;
+                    border-width: 2px;
+                }
+                .info{
+                    .userName{
+                        font-size:13px;
+                    }
+                    .qq{
+                        font-size:10px;
+                        // float: left;
+                        // position: absolute;
+                        // right:0;
+                        // top:0;
+                    }
+                    .money{
+                        font-size:13px;
+                        margin-top:0px;
+                    }
+                }
+                .index{
+                    width:auto;
+                    height:auto;
+                    margin:0;
+                    font-size:26px;
+                    padding-right:10px;
+                }
+            }
+        }
+    }
+
 }

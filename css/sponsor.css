@@ -150,6 +150,7 @@ body {
   display: flex;
   transition: all 0.35s;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
 }
 #List ul li:first-child {
   width: 80%;
@@ -241,4 +242,46 @@ body {
   top: 0;
   opacity: 0.95;
   z-index: -99;
+}
+@media screen and (max-width: 480px) {
+  .title .main {
+    font-size: 18px;
+  }
+  #pageCenter {
+    padding-top: 20px;
+  }
+  .rantInfo {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  #List ul {
+    padding: 5px;
+  }
+  #List ul li {
+    margin: 6px;
+    padding: 5px;
+  }
+  #List ul li img {
+    width: 46px;
+    height: 46px;
+    border-width: 2px;
+  }
+  #List ul li .info .userName {
+    font-size: 13px;
+  }
+  #List ul li .info .qq {
+    font-size: 10px;
+  }
+  #List ul li .info .money {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+  #List ul li .index {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 26px;
+    padding-right: 10px;
+  }
 }

@@ -149,6 +149,7 @@ body .activityBackground {
   width: 25%;
   flex-grow: 1;
   margin: 10px;
+  min-width: 200px;
   border-radius: 8px;
   margin-bottom: 10px;
   background: #010d1f99;
@@ -228,4 +229,9 @@ body .activityBackground {
 }
 #List ul li:hover .index {
   opacity: 0.5;
+}
+@media screen and (max-width: 480px) {
+  .title .main {
+    font-size: 18px;
+  }
 }
