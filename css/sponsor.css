@@ -57,6 +57,43 @@ body {
 .title .rantInfo:hover .white {
   color: #fff;
 }
+.title .rantInfo .award {
+  color: gold;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 600px;
+  padding: 4px 10px;
+  text-align: left;
+  background: #00000044;
+  margin: 4px 0px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 54px;
+  line-height: 23px;
+}
+.title .rantInfo .award:first-of-type {
+  margin-top: 15px;
+  border: 1px solid gold;
+}
+.title .rantInfo .award:nth-of-type(2) {
+  border: 1px solid #c0c0c0;
+}
+.title .rantInfo .award:nth-of-type(3) {
+  border: 1px solid #B87333;
+}
+.title .rantInfo .award.normal {
+  opacity: 0.8;
+}
+.title .rantInfo .award.basic {
+  opacity: 0.6;
+}
+.title .rantInfo .purple {
+  color: red;
+}
+.title .rantInfo .cyan {
+  color: cyan;
+}
 #List {
   border-radius: 8px;
   max-width: 1000px;

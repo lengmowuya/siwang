@@ -20,7 +20,8 @@
   margin-top: 30%;
 }
 .logo:hover img {
-  width: 95%;
+  width: 120%;
+  opacity: 0.75;
 }
 .logo img {
   user-select: none;
