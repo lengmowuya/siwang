@@ -5,8 +5,8 @@
     <meta charset="GBK">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空间站-活动列表</title>
-    <link rel="stylesheet" href="./css/activity.css">
+    <title>空间站-更新公告</title>
+    <link rel="stylesheet" href="./css/bulletin.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
 </head>
@@ -15,8 +15,8 @@
     <div class="nav">
         <ul>
             <li><a href="/">首页</a></li>
-            <li><a href="/bulletin.html">公告</a></li>
-            <li class="active"><a href="/activity.html">活动</a></li>
+            <li class="active"><a href="/bulletin.html">公告</a></li>
+            <li><a href="/activity.html">活动</a></li>
             <li>文档</li>
         </ul>   
     </div>
@@ -38,13 +38,13 @@
     </div>
     <script>
         let activityList = [
-            {name: "【周年庆】我是赞助商!",qq: 2466396619,date: "8-4",cover_url: "https://sc2.nosdn.127.net/images/2021/5/6/2dc303d1524073c57b4ec1f9613d1e66"},
-            // {name: "【周年庆】优惠套餐随心选！",qq: 2964019036,date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2021/2/3/927a831334eed1fed0a11fbd250f31ee"},
-            {name: "【周年庆】待定活动",qq: 2964019036,date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2021/2/3/927a831334eed1fed0a11fbd250f31ee"},
-            // {name: "【周年庆】全员狂欢嘻唰唰！",qq: 2964019036,date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2020/10/15/87c5d2af362b4c3b83eedf9e9dd5a2fe"},
-            {name: "【周年庆】待定活动",qq: 2964019036,date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2020/10/15/87c5d2af362b4c3b83eedf9e9dd5a2fe"},
-            // {name: "战场老兵回归令！",qq: 2964019036,date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2020/7/24/a3898b178036bc7c61719aa764f59cf9"},
-            // {name: "开箱大集结！",qq: 2964019036,date: "8-6",cover_url:"https://hearthstone.nosdn.127.net/a/images/2019/12/13/fb2e4dfddb36d75cb10d747fb4969efb.jpg"},
+            {name: "死亡空间站2.495版本更新公告",date: "8-10",contentText:`1.降低了尸体虫的部分研究时间和需求资源
+2.新增4级装备*12
+3.金色装备提高至7级（不影响属性和价格）
+4.诺娃的破坏无人机冷却降低
+5.符咒“敏捷”的上限数量翻倍`},
+            {name: "【周年庆】待定活动",date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2021/2/3/927a831334eed1fed0a11fbd250f31ee"},
+            {name: "【周年庆】待定活动",date: "8-6",cover_url:"https://sc2.nosdn.127.net/images/2020/10/15/87c5d2af362b4c3b83eedf9e9dd5a2fe"},
         ]
         // 根据数组自动化创建列表元素
         function initList(){
