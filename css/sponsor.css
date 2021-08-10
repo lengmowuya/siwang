@@ -34,8 +34,10 @@ body {
   text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
 }
 .title .time {
-  color: #4393bf;
+  color: #fff;
   font-size: 12px;
+  margin-top: 5px;
+  opacity: 0.8;
 }
 .title .rantInfo {
   max-width: 800px;
