@@ -204,7 +204,7 @@ body .activityBackground {
   opacity: 0.8;
 }
 #List ul li::after {
-  content: "热门";
+  content: "火热";
   position: absolute;
   padding: 2px 4px;
   right: 8px;

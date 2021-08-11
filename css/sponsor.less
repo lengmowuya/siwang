@@ -50,7 +50,7 @@ body{
         // height:100px;
         border:1px solid #29b0df;
         background:#001b44bb;
-        color:#4d83b5;
+        color:#ccc;
         box-shadow: 0 0 9px #0068a3;
         margin-top:15px;
         padding:10px;
@@ -59,7 +59,8 @@ body{
         // flex-direction: column;
         // align-items: center;
         .white{
-            color:#ffffffaa;
+            color:#fff;
+            font-weight: bold;
             transition: all 0.35s;
         }
         &:hover{
@@ -70,29 +71,34 @@ body{
         }
         .award{
             color:gold;
-            width:100%;
+            // width:100%;
+            min-width: 60%;
             margin:0 auto;
             display:inline-block;
-            max-width:600px;
+            max-width:95%;
             padding:4px 10px;
             text-align: left;
             background:#00000044;
             margin:4px 0px;
             box-sizing: border-box;
             border-radius: 5px;
-            height:54px;
+            height:58px;
+            text-align: center;
             line-height: 23px;
+            border:2px solid #4393bf99;
+            overflow: hidden;
+            background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
             // text-shadow: 1px 1px 6px #ffffff99;
             &:first-of-type{
                 margin-top:15px;
-                border:1px solid gold;
+                border-color: gold;
                 // height:48px;
             }
             &:nth-of-type(2){
-                border:1px solid #c0c0c0;
+                border-color: #c0c0c0;
             }
             &:nth-of-type(3){
-                border:1px solid #B87333;
+                border-color: #B87333;
             }
             &.normal{
                 opacity: 0.8;
