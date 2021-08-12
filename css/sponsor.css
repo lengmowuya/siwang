@@ -102,6 +102,12 @@ body {
 .title .rantInfo .cyan {
   color: cyan;
 }
+.title .rantInfo .must {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px;
+}
 #List {
   border-radius: 8px;
   max-width: 1000px;
