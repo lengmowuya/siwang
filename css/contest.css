@@ -3,8 +3,8 @@
   padding: 0;
 }
 body {
-  background: #010816;
-  background: #000 url(https://sc2.nosdn.127.net/1/style/v4/common/main_bg_v4.jpg) no-repeat fixed center center;
+  background: #000 url(../assets/bg/mengsk.jpg) no-repeat fixed center center;
+  background-size: cover;
 }
 #pageCenter {
   max-width: 1450px;
@@ -28,10 +28,10 @@ body {
   font-weight: bold;
   color: #a3c9e4;
   transition: all 0.35s;
+  text-shadow: 0px 0px 2px #000;
 }
 .title .main:hover {
-  color: #fff;
-  text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 15px #000, 0 0 30px rgba(255, 255, 255, 0.3);
 }
 .title .time {
   color: #fff;

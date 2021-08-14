@@ -132,7 +132,6 @@ body .activityBackground {
   display: block;
   width: 100%;
   flex-grow: 1;
-  margin-left: -2px;
 }
 #List ul li:hover img {
   border: 4px solid #4393bf;

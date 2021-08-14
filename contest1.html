@@ -5,8 +5,8 @@
     <meta charset="GBK">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空间站-活动列表</title>
-    <link rel="stylesheet" href="./css/activity.css">
+    <title>空间站-周年赞助</title>
+    <link rel="stylesheet" href="./css/contest.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="icon" href="https://sc2.nosdn.127.net/1/style/images/sc2.ico" type="image/x-icon"/>
 </head>
@@ -22,9 +22,18 @@
     </div>
     <div id="pageCenter">
         <div class="title">
-            <p class="main">《死亡空间站》活动列表</p>
-            <p class="time">下方展示《死亡空间站》当前正在举行的活动，点击进入活动详情页。</p>
+            <p class="main">第一届竞速赛-残酷突变</p>
+            <span class="time">2021-08-13 0:00:00 - 冷漠乌鸦</span>
+            <div class="rantInfo">
+                在残酷突变难度下进行速通。需要以战队形式进行报名，需要队伍名称，队员名称，战队头像。一个战队暂定8人（不用满人这是最大人数）。可能根据报名人数更改。
+                <!-- <p class="award">(第1名) 【周年庆礼盒】*400 <span>【定制随从】</span><span class="purple">【六级装备箱子】*5</span><span class="cyan">【五级装备箱子】*20</span></p> -->
+                <!-- <p class="award">(第2名) 【周年庆礼盒】*200 <span>【定制随从】</span><span class="purple">【六级装备箱子】*2</span><span class="cyan">【五级装备箱子】*10</span></p> -->
+                <!-- <p class="award">(第3名) 【周年庆礼盒】*100 <span>【定制随从】</span><span class="cyan">【五级装备箱子】*10</span></p> -->
+                <!-- <p class="award normal">(第4-10名) 【周年庆礼盒*40】 <span class="cyan">【五级装备箱子】*5</span></p> -->
+                <!-- <p class="award basic">(第11名往后) 【周年庆礼盒*20】 <span class="cyan">【五级装备箱子】*2</span></p> -->
+            </div>
         </div>
+    
         <div id="List">
             <div class="List_image">
                 <div class="list_topImage"></div>
@@ -34,28 +43,35 @@
             </ul>
         </div>
     </div>
-    <div class="activityBackground">
-        <!-- <img src="https://sc2.nosdn.127.net/1/style/v4/common/main_bg_v4.jpg" alt=""> -->
-    </div>
     <script>
-        let activityList = [
-            {name: "【周年庆】我是赞助商!",href:"/sponsor.html",qq: 2466396619,date: "8月4日 至 9月16日",cover_url: "https://sc2.nosdn.127.net/images/2021/5/6/2dc303d1524073c57b4ec1f9613d1e66"},
-            {name: "【周年庆】礼盒派送",qq: 2964019036,date: "8月4日 至 9月16日",cover_url:"https://sc2.nosdn.127.net/images/2021/2/3/927a831334eed1fed0a11fbd250f31ee"},
-            {name: "第一届竞速赛-残酷突变",href:"/contest1.html",qq: 2964019036,date: "8月4日 至 9月16日",cover_url:"https://sc2.nosdn.127.net/images/2020/10/15/87c5d2af362b4c3b83eedf9e9dd5a2fe"},
+        let memberMoney = [
+            {name: "暴风E军团",
+                record:{
+                    time:"暂无记录",
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:861973601},
+                {qq:2762714464},
+                {qq:1070020304},
+                {qq:1846429409},
+                {qq:1067538087},
+                {qq:1034586556},
+                {qq:3149677496},
+                {qq:703607486},
+            ]},
         ]
         // 根据数组自动化创建列表元素
         function initList(){
             let ListUl = document.querySelector("#List>ul");
-            for(let i=0;i<activityList.length;i++){
-                let memberObj = activityList[i];
+            for(let i=0;i<memberRant.length;i++){
+                let memberObj = memberRant[i];
                 // 创建li
                 let li = document.createElement("li");
-                let a =document.createElement("a");
-                a.href=memberObj.href;
-                // a.setAttribute("h")
                 // 创建头像
                 let img = document.createElement("img");
-                img.src = memberObj.cover_url;
+                img.src = `./assets/item/暴风E军团.jpg`;
                 // 创建信息块
                 let info = document.createElement("div");
                 info.classList.add("info");
@@ -66,7 +82,7 @@
                     // 创建用户QQ
                     let userqq = document.createElement("p");
                     userqq.classList.add("qq");
-                    userqq.innerText = memberObj.date;
+                    userqq.innerText = memberObj.qq;
                     // 创建额度
                     let usermoney = document.createElement("p");
                     usermoney.classList.add("money");
@@ -78,16 +94,20 @@
                 // 整合元素
                 info.appendChild(userName);
                 info.appendChild(userqq);
-                // info.appendChild(usermoney);
-                a.appendChild(img);
-                a.appendChild(info);
-                li.appendChild(a);
-                // li.appendChild(userindex);
+                info.appendChild(usermoney);
+                li.appendChild(img);
+                li.appendChild(info);
+                li.appendChild(userindex);
                 ListUl.appendChild(li);
             }
 
         }
 
+
+        function setMemberList(){
+
+        }
+        
         let memberRant = [];
         // 合并记录至QQ为单位下的数据
         function initRant(){
@@ -115,10 +135,11 @@
                 return  b.quota - a.quota;
             })
         }
-        // initRant();
-        // initRantSort();
+        initRant();
+        initRantSort();
         initList();
     </script>
+    <!-- <img src="http://imgs.aixifan.com/o_1ce0vqi3d6kjide1mqv1jd9n1p2v.jpg" alt=""> -->
 </body>
 
 </html>
