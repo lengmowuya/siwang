@@ -266,6 +266,7 @@ body {
     font-size: 18px;
   }
   #pageCenter {
+    padding: 6px;
     padding-top: 20px;
   }
   .rantInfo {
@@ -274,11 +275,11 @@ body {
     font-size: 12px;
   }
   #List ul {
-    padding: 5px;
+    padding: 4px;
   }
   #List ul li {
-    margin: 6px;
-    padding: 5px;
+    margin: 4px;
+    padding: 4px;
   }
   #List ul li img {
     width: 46px;
