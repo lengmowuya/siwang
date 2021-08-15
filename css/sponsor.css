@@ -152,7 +152,7 @@ body {
   justify-content: space-between;
 }
 #List ul li {
-  width: 40%;
+  width: 34%;
   flex-grow: 1;
   margin: 10px;
   border-radius: 8px;
@@ -166,9 +166,6 @@ body {
   transition: all 0.35s;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   min-width: 200px;
-}
-#List ul li:not(#List ul li:first-child) {
-  max-width: calc(50% - 44px);
 }
 #List ul li:first-child {
   width: 80%;
