@@ -167,6 +167,9 @@ body {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   min-width: 200px;
 }
+#List ul li:not(#List ul li:first-child) {
+  max-width: calc(50% - 44px);
+}
 #List ul li:first-child {
   width: 80%;
   border: 3px solid gold;
@@ -197,6 +200,9 @@ body {
 }
 #List ul li:nth-child(3) .money {
   color: #B87333 !important;
+}
+#List ul li:nth-child(n+11) {
+  opacity: 0.9;
 }
 #List ul li img {
   border-radius: 6px;

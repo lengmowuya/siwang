@@ -183,6 +183,9 @@ body{
             transition:all 0.35s;
             box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
             min-width: 200px;
+            &:not(&:first-child){
+                max-width: calc(50% - 44px);
+            }
             &:first-child{
                 width:80%;
                 border:3px solid gold;
@@ -215,6 +218,9 @@ body{
                 .money{
                     color:#B87333 !important;
                 }
+            }
+            &:nth-child(n+11){
+                opacity: 0.9;
             }
             img{
                 border-radius:6px;
