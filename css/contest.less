@@ -73,7 +73,7 @@ body{
             }
         }
         .award{
-            color:gold;
+            color:#4393bf99;
             // width:100%;
             min-width: 60%;
             margin:0 auto;
@@ -95,13 +95,16 @@ body{
             &:first-of-type{
                 margin-top:15px;
                 border-color: gold;
+                color:gold;
                 // height:48px;
             }
             &:nth-of-type(2){
                 border-color: #c0c0c0;
+                color:#c0c0c0;
             }
             &:nth-of-type(3){
                 border-color: #B87333;
+                color:#B87333;
             }
             &.normal{
                 opacity: 0.8;
@@ -224,6 +227,7 @@ body{
                 width:76px;
                 height:76px;
                 border:3px solid #4393bf;
+                flex-shrink: 0;
             }
             .info{
                 display:flex;
@@ -266,10 +270,10 @@ body{
                 }
             }
             .index{
-                font-size:46px;
+                font-size:24px;
                 color:#fff;
-                font-weight: bold;
-                opacity: 0.25;
+                // font-weight: bold;
+                opacity: 0.5;
                 justify-content: flex-end;
                 text-align: right;
                 align-items: center;
@@ -300,13 +304,14 @@ body{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:720px){
     .title{
         .main{
             font-size:18px;
         }
     }
     #pageCenter{
+        padding:5px;
         padding-top:20px;   
     }
     .rantInfo{
@@ -315,19 +320,19 @@ body{
         font-size:12px;
     }
     #List{
-        ul{
-            padding:5px;
-            li{
-                margin:6px;
+        &>ul{
+            padding:5px !important;
+            &>li{
+                margin: 5px 0px !important;
                 padding:5px;
-                img{
-                    width:46px;
-                    height:46px;
-                    border-width: 2px;
+                .contest_header{
+                    width:48px !important;
+                    height:48px !important;
+                    border-width: 2px !important;
                 }
                 .info{
                     .userName{
-                        font-size:13px;
+                        font-size:12px !important;
                     }
                     .qq{
                         font-size:10px;
@@ -340,12 +345,24 @@ body{
                         font-size:13px;
                         margin-top:0px;
                     }
+                    .member_list{
+                        li{
+                            margin:0px 2px !important;
+                        }
+                        img{
+                            width:26px !important;
+                            height:26px !important;
+                        }
+                    }
                 }
                 .index{
+                    position: absolute;
+                    right:-7px;
+                    top:-7px;
                     width:auto;
                     height:auto;
                     margin:0;
-                    font-size:26px;
+                    font-size:16px !important;
                     padding-right:10px;
                 }
             }
@@ -353,3 +370,24 @@ body{
     }
 
 }
+// @media screen and (max-width:480px){
+//     .title{
+//         .main{
+//             font-size:22px;
+//         }
+//     }
+//     #pageCenter{
+//         padding:5px;
+//         padding-top:20px;
+//     }
+//     #List{
+//         &>ul{
+//             padding:5px !important;
+//             &>li{
+//                 margin:5px !important;
+//                 padding:0px !important;
+//                 .
+//             }
+//         }
+//     }
+// }

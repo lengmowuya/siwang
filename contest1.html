@@ -26,6 +26,11 @@
             <span class="time">2021-08-13 0:00:00 - 冷漠乌鸦</span>
             <div class="rantInfo">
                 在残酷突变难度下进行速通。需要以战队形式进行报名，需要队伍名称，队员名称，战队头像。一个战队暂定8人（不用满人这是最大人数）。可能根据报名人数更改。
+                <br> 活动持续时间8月16日 至 8月25日。<br>
+                <p class="award">第一战队:各成员2000死亡水晶 20W时空币</p>
+                <p class="award">第二战队:各成员1500死亡水晶 15W时空币</p>
+                <p class="award">第三战队:各成员1000死亡水晶 10W时空币</p>
+                <p class="award">其他战队:各成员300死亡水晶 3W时空币</p>
             </div>
         </div>
     
@@ -43,7 +48,7 @@
             {name: "暴风E军团",
                 cover_url:"暴风E军团.jpg",
                 record:{
-                    time:99999,
+                    time:234,
                     date:"暂无记录",
                     version:"暂无记录"
                 }
@@ -53,7 +58,7 @@
                 {qq:1070020304},
                 {qq:1846429409},
                 {qq:1067538087},
-                {qq:1034586556},
+                // {qq:1034586556},
                 {qq:3149677496},
                 {qq:703607486},
             ]},
@@ -153,7 +158,10 @@
                 if(memberObj.record.time>= 9999){
                     userindex.innerText = " ";
                 }else{
-                    userindex.innerText = memberObj.record.time + "秒";
+                    let min = Math.floor(memberObj.record.time / 60);
+                    let sec = memberObj.record.time - (min * 60);
+                    // userindex.innerText = memberObj.record.time + "秒";
+                    userindex.innerText = min+"分 " + sec + "秒";
                 }
                 // 整合元素
                 info.appendChild(userName);

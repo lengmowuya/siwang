@@ -62,7 +62,7 @@ body {
   color: #fff;
 }
 .title .rantInfo .award {
-  color: gold;
+  color: #4393bf99;
   min-width: 60%;
   margin: 0 auto;
   display: inline-block;
@@ -82,12 +82,15 @@ body {
 .title .rantInfo .award:first-of-type {
   margin-top: 15px;
   border-color: gold;
+  color: gold;
 }
 .title .rantInfo .award:nth-of-type(2) {
   border-color: #c0c0c0;
+  color: #c0c0c0;
 }
 .title .rantInfo .award:nth-of-type(3) {
   border-color: #B87333;
+  color: #B87333;
 }
 .title .rantInfo .award.normal {
   opacity: 0.8;
@@ -154,6 +157,7 @@ body {
   width: 76px;
   height: 76px;
   border: 3px solid #4393bf;
+  flex-shrink: 0;
 }
 #List .contest_List > li .info {
   display: flex;
@@ -194,10 +198,9 @@ body {
   border: 1px solid #4393bf;
 }
 #List .contest_List > li .index {
-  font-size: 46px;
+  font-size: 24px;
   color: #fff;
-  font-weight: bold;
-  opacity: 0.25;
+  opacity: 0.5;
   justify-content: flex-end;
   text-align: right;
   align-items: center;
@@ -224,11 +227,12 @@ body {
   opacity: 0.95;
   z-index: -99;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .title .main {
     font-size: 18px;
   }
   #pageCenter {
+    padding: 5px;
     padding-top: 20px;
   }
   .rantInfo {
@@ -236,33 +240,43 @@ body {
     margin-right: 15px;
     font-size: 12px;
   }
-  #List ul {
+  #List > ul {
+    padding: 5px !important;
+  }
+  #List > ul > li {
+    margin: 5px 0px !important;
     padding: 5px;
   }
-  #List ul li {
-    margin: 6px;
-    padding: 5px;
+  #List > ul > li .contest_header {
+    width: 48px !important;
+    height: 48px !important;
+    border-width: 2px !important;
   }
-  #List ul li img {
-    width: 46px;
-    height: 46px;
-    border-width: 2px;
+  #List > ul > li .info .userName {
+    font-size: 12px !important;
   }
-  #List ul li .info .userName {
-    font-size: 13px;
-  }
-  #List ul li .info .qq {
+  #List > ul > li .info .qq {
     font-size: 10px;
   }
-  #List ul li .info .money {
+  #List > ul > li .info .money {
     font-size: 13px;
     margin-top: 0px;
   }
-  #List ul li .index {
+  #List > ul > li .info .member_list li {
+    margin: 0px 2px !important;
+  }
+  #List > ul > li .info .member_list img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  #List > ul > li .index {
+    position: absolute;
+    right: -7px;
+    top: -7px;
     width: auto;
     height: auto;
     margin: 0;
-    font-size: 26px;
+    font-size: 16px !important;
     padding-right: 10px;
   }
 }
