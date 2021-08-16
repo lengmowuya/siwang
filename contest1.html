@@ -34,7 +34,7 @@
                 <div class="list_topImage"></div>
                 <div class="list_bottomImage"></div>
             </div>
-            <ul>
+            <ul class="contest_List">
             </ul>
         </div>
     </div>
@@ -65,14 +65,15 @@
                     version:"暂无记录"
                 }
             ,r: "8-4",member:[
-                {qq:861973601},
-                {qq:2762714464},
-                {qq:1070020304},
-                {qq:1846429409},
-                {qq:1067538087},
-                {qq:1034586556},
                 {qq:3149677496},
-                {qq:703607486},
+                {qq:2136805093},
+                {qq:1460887992},
+                {qq:2466396619},
+                {qq:2237192961},
+                {qq:1070020304},
+                {qq:403015696},
+                {qq:2497788207},
+                
             ]},
             {name: "宿命的旋律",
                 cover_url:"宿命的旋律.png",
@@ -82,14 +83,15 @@
                     version:"暂无记录"
                 }
             ,r: "8-4",member:[
-                {qq:861973601},
-                {qq:2762714464},
-                {qq:1070020304},
-                {qq:1846429409},
-                {qq:1067538087},
-                {qq:1034586556},
-                {qq:3149677496},
                 {qq:703607486},
+                {qq:1067538087},
+                {qq:1970450662},
+                {qq:1723706793},
+                {qq:346799963},
+                {qq:2466396619},
+                {qq:1191400986},
+                {qq:403015696},
+                
             ]},
         ]
         // 根据数组自动化创建列表元素
@@ -102,13 +104,17 @@
                 // 创建头像
                 let img = document.createElement("img");
                 img.src = "./assets/item/"+memberObj.cover_url;
+                img.classList.add("contest_header")
+                // 创建上板块
+                // let topBlock = document.createElement("div");
+                // let bottomBlock = document.createElement("div");
                 // 创建信息块
                 let info = document.createElement("div");
                 info.classList.add("info");
                     // 创建用户名
                     let userName = document.createElement("p");
                     userName.classList.add("userName");
-                    userName.innerText = "战队<"+memberObj.name+">";
+                    userName.innerText = "<"+memberObj.name+">";
                     // 创建用户QQ
                     let userqq = document.createElement("p");
                     userqq.classList.add("qq");
@@ -117,17 +123,30 @@
                     let usermoney = document.createElement("p");
                     usermoney.classList.add("money");
                     // usermoney.innerText = memberObj.quota + "￥";
+                    let memeber_list = document.createElement("ul");
+                    memeber_list.classList.add("member_list");
+                    for(let j=0;j<memberObj.member.length;j++){
+                        let member = memberObj.member[j];
+                        let memeber_li = document.createElement("li");
+                        let memeber_li_header = document.createElement("img");
+                        memeber_li_header.src = `https://q4.qlogo.cn/g?b=qq&nk=${member.qq}&s=140`
+                        memeber_li_header.title = 'QQ:'+member.qq;
+                        memeber_li.appendChild(memeber_li_header);
+                        memeber_list.appendChild(memeber_li);
+                    }
                 // 创建排行序号
                 let userindex = document.createElement("div");
                 userindex.classList.add("index");
-                userindex.innerText = i+1;
+                userindex.innerText = i+1 +" "+ memberObj.record.time;
                 // 整合元素
                 info.appendChild(userName);
-                info.appendChild(userqq);
-                info.appendChild(usermoney);
+                info.appendChild(memeber_list);
+                // info.appendChild(userqq);
+                // info.appendChild(usermoney);
                 li.appendChild(img);
                 li.appendChild(info);
                 li.appendChild(userindex);
+                // li.appendChild(memeber_list);
                 ListUl.appendChild(li);
             }
 
