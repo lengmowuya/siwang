@@ -49,6 +49,7 @@
         </div>
     </div>
     <script>
+        let subMoney = 0;
         let memberMoney = [
             {name: "戴眼镜的那个男孩(叔叔",qq: 2466396619,date: "8-4",quota: 200},
             {name: "HK416（416姐姐）",qq: 2964019036,date: "8-6",quota: 50},
@@ -94,12 +95,15 @@
             {name: ".",qq: 2497788207,date: "8-15",quota: 1},
             {name: "……■不知道为什么",qq: 986767062,date: "8-15",quota: 30},
             {name: "ΖЕЯΟ 'ㅅ'",qq: 526122597,date: "8-16",quota: 50},
+            {name: "淼",qq: 1422443473,date: "8-16",quota: 20},
+            {name: "好梦",qq: 1070020304,date: "8-16",quota: 35},
         ]
         // 根据数组自动化创建列表元素
         function initList(){
             let ListUl = document.querySelector("#List>ul");
             for(let i=0;i<memberRant.length;i++){
                 let memberObj = memberRant[i];
+                subMoney+=memberObj.quota;
                 // 创建li
                 let li = document.createElement("li");
                 // 创建头像
@@ -133,7 +137,7 @@
                 li.appendChild(userindex);
                 ListUl.appendChild(li);
             }
-
+            console.log(subMoney);
         }
 
         let memberRant = [];
