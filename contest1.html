@@ -43,7 +43,7 @@
             {name: "暴风E军团",
                 cover_url:"暴风E军团.jpg",
                 record:{
-                    time:"暂无记录",
+                    time:99999,
                     date:"暂无记录",
                     version:"暂无记录"
                 }
@@ -60,7 +60,7 @@
             {name: "达拉姆",
                 cover_url:"达拉姆.jpg",
                 record:{
-                    time:"暂无记录",
+                    time:238,
                     date:"暂无记录",
                     version:"暂无记录"
                 }
@@ -70,15 +70,14 @@
                 {qq:1460887992},
                 {qq:2466396619},
                 {qq:2237192961},
-                {qq:1070020304},
+                // {qq:1070020304},
                 {qq:403015696},
                 {qq:2497788207},
-                
             ]},
             {name: "宿命的旋律",
                 cover_url:"宿命的旋律.png",
                 record:{
-                    time:"暂无记录",
+                    time:236,
                     date:"暂无记录",
                     version:"暂无记录"
                 }
@@ -86,12 +85,26 @@
                 {qq:703607486},
                 {qq:1067538087},
                 {qq:1970450662},
-                {qq:1723706793},
-                {qq:346799963},
+                // {qq:1723706793},
+                // {qq:346799963},
                 {qq:2466396619},
                 {qq:1191400986},
                 {qq:403015696},
                 
+            ]},
+            {name: "强势掠夺者",
+                cover_url:"强势掠夺者.png",
+                record:{
+                    time:99999,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:3537168410},
+                {qq:2762714464},
+                {qq:1460887992},
+                {qq:2497788207},
+                {qq:1970450662},
             ]},
         ]
         // 根据数组自动化创建列表元素
@@ -137,7 +150,11 @@
                 // 创建排行序号
                 let userindex = document.createElement("div");
                 userindex.classList.add("index");
-                userindex.innerText = i+1 +" "+ memberObj.record.time;
+                if(memberObj.record.time>= 9999){
+                    userindex.innerText = " ";
+                }else{
+                    userindex.innerText = memberObj.record.time + "秒";
+                }
                 // 整合元素
                 info.appendChild(userName);
                 info.appendChild(memeber_list);
@@ -180,12 +197,12 @@
         }
         // 对赞助数据进行排序
         function initRantSort(){
-            memberRant = memberRant.sort(function(a,b){
-                return  b.quota - a.quota;
+            memberMoney = memberMoney.sort(function(a,b){
+                return  a.record.time - b.record.time;
             })
         }
-        initRant();
         initRantSort();
+        // initRant();
         initList();
     </script>
     <!-- <img src="http://imgs.aixifan.com/o_1ce0vqi3d6kjide1mqv1jd9n1p2v.jpg" alt=""> -->

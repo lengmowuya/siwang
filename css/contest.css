@@ -134,6 +134,7 @@ body {
   justify-content: space-between;
 }
 #List .contest_List > li {
+  width: 50%;
   flex-grow: 1;
   margin: 10px;
   border-radius: 8px;
