@@ -116,6 +116,21 @@
                 {qq:2497788207},
                 {qq:2136805093},
             ]},
+            {name: "乌鸦后援团",
+                cover_url:"https://q4.qlogo.cn/g?b=qq&nk=3537168410&s=140",
+                record:{
+                    time:270,
+                    date:"暂无记录",
+                    version:"暂无记录"
+                }
+            ,r: "8-4",member:[
+                {qq:403015696},
+                {qq:1067538087},
+                {qq:2466396619},
+                {qq:2136805093},
+                {qq:1206471495},
+                {qq:2762714464},
+            ]},
         ]
         // 根据数组自动化创建列表元素
         function initList(){
@@ -126,7 +141,11 @@
                 let li = document.createElement("li");
                 // 创建头像
                 let img = document.createElement("img");
-                img.src = "./assets/item/"+memberObj.cover_url;
+                if(memberObj.cover_url.indexOf("http") != -1){
+                    img.src = memberObj.cover_url;
+                }else{
+                    img.src = "./assets/item/"+memberObj.cover_url;
+                }
                 img.classList.add("contest_header")
                 // 创建上板块
                 // let topBlock = document.createElement("div");
