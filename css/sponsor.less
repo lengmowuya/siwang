@@ -33,6 +33,9 @@ body{
         font-weight: bold;
         color:#a3c9e4;
         transition: all 0.35s;
+        color:#fff;
+        letter-spacing: 3px;
+        text-shadow: 0 0 15px gold, 0 0 30px rgb(255 255 255 / 15%);        
         &:hover{
             color:#fff;
             text-shadow: 0 0 15px #fff, 0 0 30px rgb(255 255 255 / 30%);        
@@ -40,8 +43,11 @@ body{
     }
     .time{
         color:#fff;
-        font-size:12px;
+        font-size:16px;
         margin-top:5px;
+        letter-spacing: 3px;
+        // text-decoration: ;
+        font-style: italic;
         opacity: 0.8;
     }
     .rantInfo{
@@ -114,7 +120,7 @@ body{
             color:cyan;
         }
         .must{
-            color:red;
+            color:tomato;
             font-weight: bold;
             font-size:18px;
             margin:10px 0px;
@@ -127,10 +133,13 @@ body{
     border-radius: 8px;
     max-width: 1000px;
     margin:0 auto;
-    padding-bottom:150px;
+    padding-bottom:50px;
+    padding-top:50px;
+    margin-bottom:150px;
     // background:#010d1f99;
     overflow: hidden;
     position: relative;
+    border:3px solid #0068a3;
     .List_image{
         width:100%;
         height:100%;
@@ -138,7 +147,7 @@ body{
         left:0;
         top:0;
         background:#010d1f;
-        opacity: 0.5;
+        opacity: 0.8;
         .list_topImage{
             background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
             width:100%;
@@ -167,7 +176,7 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         li{
-            width:34%;
+            width:80%;
             display:flex;
             flex-grow: 1;
             margin:10px;
@@ -183,12 +192,15 @@ body{
             transition:all 0.35s;
             box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
             min-width: 200px;   
+            opacity: 0.9;
+
             &:not(&:first-child){
                 // max-width: calc(50% - 44px);
             }
             &:first-child{
+                padding:16px 16px;
                 width:80%;
-                border:3px solid gold;
+                border:4px solid gold;
                 // background:rgba(255, 217, 0,0.1);
                 .index{
                     color:gold;
@@ -197,10 +209,19 @@ body{
                 .money{
                     color:gold !important;
                 }
+                img{
+                    border-color:gold !important;
+                }
+                .index{
+                    font-size:64px;
+                    font-style: italic;
+                    padding-right:15px;
+                }
             }
             
             &:nth-child(2){
-                border:3px solid #c0c0c0;
+                padding:16px 16px;
+                border:4px solid #c0c0c0;
                 .index{
                     color:#c0c0c0;
                     opacity: 1;
@@ -208,15 +229,32 @@ body{
                 .money{
                     color:#c0c0c0 !important;
                 }
+                img{
+                    border-color:silver !important;
+                }
+                .index{
+                    font-size:64px;
+                    font-style: italic;
+                    padding-right:15px;
+                }
             }
             &:nth-child(3){
-                border:3px solid #B87333;
+                padding:16px 16px;
+                border:4px solid #B87333;
                 .index{
                     color:#B87333;
                     opacity: 1;
                 }
                 .money{
                     color:#B87333 !important;
+                }
+                img{
+                    border-color:#B87333 !important;
+                }
+                .index{
+                    font-size:64px;
+                    font-style: italic;
+                    padding-right:15px;
                 }
             }
             &:nth-child(n+11){
@@ -232,6 +270,7 @@ body{
                 display:flex;
                 flex-direction: column;
                 padding-left:6px;
+                width:30%;
                 // justify-content: space-between   ;
                 .userName{
                     color:#fff;
@@ -252,11 +291,26 @@ body{
                     margin-top:16px;
                 }
             }
+            .AwardBlock{
+                width:30%;
+                // flex-grow: 1;
+                display:flex;
+                color:tomato;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                cursor: pointer;
+                span{
+                    &:hover{
+                        text-shadow: 0px 0px 6px #0068a3;
+                    }
+                }
+            }
             .index{
                 font-size:46px;
                 color:#fff;
                 font-weight: bold;
-                opacity: 0.25;
+                opacity: 0.4;
                 flex-grow: 1;
                 justify-content: flex-end;
                 text-align: right;
