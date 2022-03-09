@@ -3,8 +3,10 @@
     padding:0;
 }
 body{
-    background:#010816;
-    background: #000 url(https://sc2.nosdn.127.net/1/style/v4/common/main_bg_v4.jpg) no-repeat fixed center center;
+    // background:#010816;  
+    background: #000 url(./../assets/bg/mengsk.jpg) no-repeat fixed center center;
+    // background-size: 100% auto;
+    background-size:cover;
 }
 
 #pageCenter{
@@ -33,9 +35,10 @@ body{
         font-weight: bold;
         color:#a3c9e4;
         transition: all 0.35s;
+        text-shadow: 0px 0px 2px #000;    
         &:hover{
-            color:#fff;
-            text-shadow: 0 0 15px #fff, 0 0 30px rgb(255 255 255 / 30%);        
+            // color:#fff;
+            text-shadow: 0 0 15px #000, 0 0 30px rgb(255 255 255 / 30%);        
         }
     }
     .time{
@@ -70,7 +73,7 @@ body{
             }
         }
         .award{
-            color:gold;
+            color:#4393bf99;
             // width:100%;
             min-width: 60%;
             margin:0 auto;
@@ -87,18 +90,21 @@ body{
             line-height: 23px;
             border:2px solid #4393bf99;
             overflow: hidden;
-            background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
+            // background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
             // text-shadow: 1px 1px 6px #ffffff99;
             &:first-of-type{
                 margin-top:15px;
                 border-color: gold;
+                color:gold;
                 // height:48px;
             }
             &:nth-of-type(2){
                 border-color: #c0c0c0;
+                color:#c0c0c0;
             }
             &:nth-of-type(3){
                 border-color: #B87333;
+                color:#B87333;
             }
             &.normal{
                 opacity: 0.8;
@@ -139,26 +145,26 @@ body{
         top:0;
         background:#010d1f;
         opacity: 0.5;
-        .list_topImage{
-            background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
-            width:100%;
-            height:160px;
-            position: absolute;
-            left:0;
-            top:0;
-        }
-        .list_bottomImage{
-            background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
-            width:100%;
-            transform: rotateZ(180deg);
-            height:160px;
-            position: absolute;
-            left:0;
-            bottom:1px;
-        }
+        // .list_topImage{
+        //     background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
+        //     width:100%;
+        //     height:160px;
+        //     position: absolute;
+        //     left:0;
+        //     top:0;
+        // }
+        // .list_bottomImage{
+        //     background: url(https://sc2.nosdn.127.net/1/style/v3/common/common.png) no-repeat;
+        //     width:100%;
+        //     transform: rotateZ(180deg);
+        //     height:160px;
+        //     position: absolute;
+        //     left:0;
+        //     bottom:1px;
+        // }
     }
 
-    ul{
+    .contest_List{
         padding:10px 10px;
         position: relative;
         z-index:99;
@@ -166,8 +172,8 @@ body{
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        li{
-            width:34%;
+        &>li{
+            width:50%;
             display:flex;
             flex-grow: 1;
             margin:10px;
@@ -182,57 +188,53 @@ body{
             display:flex;
             transition:all 0.35s;
             box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
-            min-width: 200px;   
-            &:not(&:first-child){
-                // max-width: calc(50% - 44px);
-            }
-            &:first-child{
-                width:80%;
-                border:3px solid gold;
-                // background:rgba(255, 217, 0,0.1);
-                .index{
-                    color:gold;
-                    opacity: 1;
-                }
-                .money{
-                    color:gold !important;
-                }
-            }
+            min-width: 200px;
+            // &:first-child{
+            //     width:80%;
+            //     border:3px solid gold;
+            //     // background:rgba(255, 217, 0,0.1);
+            //     .index{
+            //         color:gold;
+            //         opacity: 1;
+            //     }
+            //     .money{
+            //         color:gold !important;
+            //     }
+            // }
             
-            &:nth-child(2){
-                border:3px solid #c0c0c0;
-                .index{
-                    color:#c0c0c0;
-                    opacity: 1;
-                }
-                .money{
-                    color:#c0c0c0 !important;
-                }
-            }
-            &:nth-child(3){
-                border:3px solid #B87333;
-                .index{
-                    color:#B87333;
-                    opacity: 1;
-                }
-                .money{
-                    color:#B87333 !important;
-                }
-            }
-            &:nth-child(n+11){
-                opacity: 0.9;
-            }
-            img{
+            // &:nth-child(2){
+            //     border:3px solid #c0c0c0;
+            //     .index{
+            //         color:#c0c0c0;
+            //         opacity: 1;
+            //     }
+            //     .money{
+            //         color:#c0c0c0 !important;
+            //     }
+            // }
+            // &:nth-child(3){
+            //     border:3px solid #B87333;
+            //     .index{
+            //         color:#B87333;
+            //         opacity: 1;
+            //     }
+            //     .money{
+            //         color:#B87333 !important;
+            //     }
+            // }
+            .contest_header{
                 border-radius:6px;
                 width:76px;
                 height:76px;
                 border:3px solid #4393bf;
+                flex-shrink: 0;
             }
             .info{
                 display:flex;
                 flex-direction: column;
                 padding-left:6px;
-                // justify-content: space-between   ;
+                flex-grow: 1;
+                justify-content: space-between;
                 .userName{
                     color:#fff;
                     font-weight: bold;
@@ -251,13 +253,27 @@ body{
                     font-weight: bold;
                     margin-top:16px;
                 }
+                .member_list{
+                    display:flex;
+                    margin-left: -5px;
+                    list-style: none;
+                    &>li{
+                        margin:0px 5px;
+                        &>img{
+                            border-radius: 3px;
+                            width:36px;
+                            height:36px;
+                            border:1px solid #4393bf;
+                            // vertical-align: bottom;
+                        }
+                    }
+                }
             }
             .index{
-                font-size:46px;
+                font-size:24px;
                 color:#fff;
-                font-weight: bold;
-                opacity: 0.25;
-                flex-grow: 1;
+                // font-weight: bold;
+                opacity: 0.5;
                 justify-content: flex-end;
                 text-align: right;
                 align-items: center;
@@ -288,14 +304,14 @@ body{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:720px){
     .title{
         .main{
             font-size:18px;
         }
     }
     #pageCenter{
-        padding:6px;
+        padding:5px;
         padding-top:20px;   
     }
     .rantInfo{
@@ -304,19 +320,19 @@ body{
         font-size:12px;
     }
     #List{
-        ul{
-            padding:4px;
-            li{
-                margin:4px;
-                padding:4px;
-                img{
-                    width:46px;
-                    height:46px;
-                    border-width: 2px;
+        &>ul{
+            padding:5px !important;
+            &>li{
+                margin: 5px 0px !important;
+                padding:5px;
+                .contest_header{
+                    width:48px !important;
+                    height:48px !important;
+                    border-width: 2px !important;
                 }
                 .info{
                     .userName{
-                        font-size:13px;
+                        font-size:12px !important;
                     }
                     .qq{
                         font-size:10px;
@@ -329,12 +345,24 @@ body{
                         font-size:13px;
                         margin-top:0px;
                     }
+                    .member_list{
+                        li{
+                            margin:0px 2px !important;
+                        }
+                        img{
+                            width:26px !important;
+                            height:26px !important;
+                        }
+                    }
                 }
                 .index{
+                    position: absolute;
+                    right:-7px;
+                    top:-7px;
                     width:auto;
                     height:auto;
                     margin:0;
-                    font-size:26px;
+                    font-size:16px !important;
                     padding-right:10px;
                 }
             }
@@ -342,3 +370,24 @@ body{
     }
 
 }
+// @media screen and (max-width:480px){
+//     .title{
+//         .main{
+//             font-size:22px;
+//         }
+//     }
+//     #pageCenter{
+//         padding:5px;
+//         padding-top:20px;
+//     }
+//     #List{
+//         &>ul{
+//             padding:5px !important;
+//             &>li{
+//                 margin:5px !important;
+//                 padding:0px !important;
+//                 .
+//             }
+//         }
+//     }
+// }
